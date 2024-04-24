@@ -48,26 +48,27 @@ we will use the ES and Kibana scripts to install the packages
    curl -L -O https://artifacts.elastic.co/downloads/beats/heartbeat/heartbeat-8.2.0-x86_64.rpm
    sudo rpm -vi heartbeat-8.2.0-x86_64.rpm
    ```
-4. open and unpin username and password
+4. open and enable username,password,https
    ```sh
    sudo nano /etc/heartbeat/heartbeat.yml
    ```
 
-5. add cert fingerprint 
+5. Add the certificate authorities 
     <p>
-    <img width="360" height="320" src="https://imgur.com/TstXxyH.png" >
+    <img width="360" height="320" src="https://imgur.com/hUNrfR1.png" >
     </p>
    ```sh
    ssl.ca_trusted_fingerprint: "<es cert fingerprint>"
    ```
    
-6. copy the output of default elastic cert by openssl and paste it in the yml file
-   ```sh
-   openssl x509 -fingerprint -sha256 -noout -in /etc/elasticsearch/certs/http_ca.crt | awk --field-separator="=" '{print $2}' | sed 's/://g'
-   ```
-7. or you can skip and use the certificate authorities  
+
+6. or by use cert fingerprint 
    ```sh
    ssl.certificate_authorities: ["/etc/elasticsearch/certs/http_ca.crt"]
+   ```
+7. copy the output of default elastic cert by openssl and paste it in the yml file
+   ```sh
+   openssl x509 -fingerprint -sha256 -noout -in /etc/elasticsearch/certs/http_ca.crt | awk --field-separator="=" '{print $2}' | sed 's/://g'
    ```
 8. configure http monitor 
     <p>
