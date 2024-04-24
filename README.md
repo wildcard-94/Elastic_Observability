@@ -76,21 +76,28 @@ we will use the ES and Kibana scripts to install the packages
     <p>
     <img width="360" height="220" src="https://imgur.com/5weblck.png" >
     </p>
-   ```
+   
 9. Check setup and reachability
-   ```js
+   ```sh
    cd /usr/share/heartbeat/
    sudo cp /etc/heartbeat/heartbeat.yml .
    sudo ./bin/heartbeat test config
    sudo ./bin/heartbeat setup
    ```
+   
     <p>
     <img width="360" height="150" src="https://imgur.com/JMGUs8V.png" >
     </p>
+
 10. Run heartbeat script
    ```sh
    sudo systemctl start heartbeat-elastic
    ```
+11. configure http monitor 
+    <p>
+    <img width="600" height="220" src="https://imgur.com/vwVDiex.png" >
+    </p>
+
 
 
 
