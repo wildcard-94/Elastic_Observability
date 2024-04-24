@@ -33,15 +33,12 @@ we will use the ES and Kibana scripts to install the packages
 
 ### Installation
 
-1. Check reachability   
-   ```js
-   sudo curl --cacert /etc/elasticsearch/certs/http_ca.crt -u elastic:$ELASTIC_PASSWORD https://localhost:9200
-   ```
+1. Go to observability section and select uptime   
     <p>
     <img width="360" height="320" src="https://i.imgur.com/lc1Fuki.png" >
     </p>
 
-2. Check reachability   
+2. select add monitors with heartbeat   
     <p>
     <img width="360" height="320" src="https://imgur.com/TeUwsZ6.png" >
     </p>
