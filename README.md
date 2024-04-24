@@ -11,7 +11,6 @@
 
 this tutorial will contain:
 * Installing Heartbeat
-* Installing Elastic Agent
 
 
 
